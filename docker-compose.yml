@@ -7,11 +7,27 @@ services:
     ports:
       - "8080:8080"
     links:
-      - mongodb
-  mongodb:
-    container_name: mongodb
+      - mongo
+    networks:
+      - iotapp-network
+  dashboard:
+    container_name: dashboard
+    build: socket-io-client/.
+    ports: 
+      - "3060:3000"
+    links: 
+      - app
+    networks:
+      - iotapp-network
+  mongo:
+    container_name: mongo
     image: mongo:latest
     volumes:
-      - ./data:/data/db
+      - ./data/db
     ports:
       - "27017:27017"
+    networks:
+      - iotapp-network
+networks:
+  iotapp-network:
+    driver: bridge
