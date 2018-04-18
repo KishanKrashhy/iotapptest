@@ -1,0 +1,6 @@
+node_modules
+socket-io-client/node_modules
+socket-io-client/yarn.lock
+socket-io-client/package-lock.json
+npm-debug.log
+package-lock.json
