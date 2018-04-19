@@ -26,11 +26,7 @@ class Navbar extends Component {
                                     <span className="d-lg-none">Notification</span>
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <a className="dropdown-item" href="#">Notification 1</a>
-                                    <a className="dropdown-item" href="#">Notification 2</a>
-                                    <a className="dropdown-item" href="#">Notification 3</a>
-                                    <a className="dropdown-item" href="#">Notification 4</a>
-                                    <a className="dropdown-item" href="#">Another notification</a>
+                                    <a className="dropdown-item" href="#">To Display Notification</a>
                                 </ul>
                             </li>
                             <li className="nav-item">
@@ -48,15 +44,10 @@ class Navbar extends Component {
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span className="no-icon">Dropdown</span>
+                                    <span className="no-icon">Submenu</span>
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <a className="dropdown-item" href="#">Something</a>
-                                    <a className="dropdown-item" href="#">Something else here</a>
-                                    <div className="divider"></div>
-                                    <a className="dropdown-item" href="#">Separated link</a>
+                                    <a className="dropdown-item" href="#">Create Actions Here</a>
                                 </div>
                             </li>
                             <li className="nav-item">
