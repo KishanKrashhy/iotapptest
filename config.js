@@ -1,4 +1,8 @@
 module.exports = config ={
     stateUpdate : false,
-    iosocket : ''
+    iosocket : '',
+    databaseConfig: {
+        host: "mongo",
+        database: "iottest"
+    }
 }

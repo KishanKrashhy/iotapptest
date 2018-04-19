@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
-mongoose.connect('mongodb://mongo/iottest', (err)=>{
+const config = require('../config');
+mongoose.connect('mongodb://'+config.databaseConfig.host+'/'+config.databaseConfig.database+'', (err)=>{
     if(err){
+        console.error.bind(console, 'connection error:');
         console.log(`cannot connect to the database due to ${err}`);
     }
     else {
