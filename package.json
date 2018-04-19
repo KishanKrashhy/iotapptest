@@ -1,19 +1,20 @@
 {
-  "name": "socket-io-server",
+  "name": "iot-rest-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is the rest server for the IOT app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kishankumar Patel",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "express-ws": "^3.0.0",
+    "memoizee": "^0.4.12",
     "mongoose": "^5.0.14",
     "socket.io": "^2.1.0",
     "ws": "^5.1.1"

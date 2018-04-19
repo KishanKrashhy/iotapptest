@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
+var memoize = require("memoizee");
 const SensorService = require('../services/SensorService');
+
 
 router.get('/', (req, res)=>{
     console.log("this is the", req.query);
-    SensorService.getDevices().then(devices => {
+    let memoized = memoize(SensorService.getDevices);
+    memoized().then(devices => {
         res.status(200).json(devices);    
     })
     .catch(err => {
@@ -15,8 +18,8 @@ router.get('/', (req, res)=>{
 
 router.get('/get', (req, res)=>{
     let id = req.query.id;
-    console.log(req.query);
-    SensorService.getDevice(id).then(devices => {
+    let memoized = memoize(SensorService.getDevice);
+    memoized(id).then(devices => {
         res.status(200).json(devices);    
     })
     .catch(err => {
@@ -37,7 +40,6 @@ router.put("/edit", (req, res)=>{
 });
 
 router.post("/add", (req, res)=>{
-    //console.log(req.body);
     SensorService.addDevices(req.body)
     .then(devices => {
         res.status(200).json({message : 'Device successfull added'});    
